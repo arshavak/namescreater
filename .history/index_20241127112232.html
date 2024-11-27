@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name creater</title>
+</head>
+<body>
+    <h5>घर के पर्यायवाची</h5>
+    <P id="ghar">गृहम् गेहम् उदवसितम् वेश्म सद्म निकेतनम् निशान्तम् वस्त्यम् सदनम् भवनम् आगारम् मन्दिरम् गृहम् निकाय्यः निलयः आलयः शरणम् धाम क्षयः धिष्ण्यम् पुरम् कुलम् ओकः</P>
+    <h5>वेद के पर्यायवाची</h5>
+    <p id="ved">श्रुति वेद आम्नाय त्रयी निगम आगम</p>
+    <hr>
+    <b>results</b>
+    <p id="results"></p>
+</body>
+<script>
+    var ghar = document.getElementById("ghar");
+    var ved = document.getElementById("ved");
+    var results = document.getElementById("results");
+    var gharPara = ghar.textContent.split(" ");
+    var vedPara = ved.textContent.split(" ");
+    for(var i = 0; i < gharPara.length; i++){
+        for(var j = 0; j < vedPara.length; j++){
+            results.innerHTML +=  vedPara[j] + gharPara[i] + " ";
+        }
+        results.innerHTML += (i+1) + "<br>"+"------------------------" + "<br><br>";
+    }
+</script>
+</html>
